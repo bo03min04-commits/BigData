@@ -1,0 +1,74 @@
+[
+  {
+    "notebook": "week01_bigdata_overview_lab.ipynb",
+    "status": "passed",
+    "seconds": 0.4079876320000011,
+    "error": null
+  },
+  {
+    "notebook": "week02_distributed_architecture_lab.ipynb",
+    "status": "passed",
+    "seconds": 0.24101759300000936,
+    "error": null
+  },
+  {
+    "notebook": "week03_apache_spark_basics_lab.ipynb",
+    "status": "passed",
+    "seconds": 12.842372197000003,
+    "error": null
+  },
+  {
+    "notebook": "week04_statistics_fundamentals_lab.ipynb",
+    "status": "passed",
+    "seconds": 0.5506789709999964,
+    "error": null
+  },
+  {
+    "notebook": "week05_feature_engineering_lab.ipynb",
+    "status": "passed",
+    "seconds": 0.48960881799999356,
+    "error": null
+  },
+  {
+    "notebook": "week06_streaming_algorithms_lab.ipynb",
+    "status": "passed",
+    "seconds": 0.2513383909999902,
+    "error": null
+  },
+  {
+    "notebook": "week07_structured_streaming_lab.ipynb",
+    "status": "passed",
+    "seconds": 4.658335467000001,
+    "error": null
+  },
+  {
+    "notebook": "week08_spark_ml_pipeline_lab.ipynb",
+    "status": "passed",
+    "seconds": 10.703068076999998,
+    "error": null
+  },
+  {
+    "notebook": "week09_multi_objective_optimization_lab.ipynb",
+    "status": "passed",
+    "seconds": 0.3146077990000009,
+    "error": null
+  },
+  {
+    "notebook": "week11_data_pipeline_practice_lab.ipynb",
+    "status": "passed",
+    "seconds": 0.27400155000000836,
+    "error": null
+  },
+  {
+    "notebook": "week12_spark_optimization_lab.ipynb",
+    "status": "passed",
+    "seconds": 1.6251595290000012,
+    "error": null
+  },
+  {
+    "notebook": "week13_mlops_pipeline_lab.ipynb",
+    "status": "passed",
+    "seconds": 0.07059779300000457,
+    "error": null
+  }
+]

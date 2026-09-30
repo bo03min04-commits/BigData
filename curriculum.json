@@ -1,0 +1,134 @@
+[
+  {
+    "week": 1,
+    "slug": "bigdata_overview",
+    "title": "빅데이터 문제 정의와 데이터 프로파일",
+    "pages": "4–19, 27–34",
+    "goal": "광고 이벤트의 품질과 규모를 측정하고 분석 문제 및 레이크하우스 구조를 정의한다.",
+    "assignment": "5V 각각에 측정 지표를 하나씩 제안하세요. Landing→Bronze→Silver→Gold의 입력·출력을 그려 제출하고, 실제 매출 KPI에 필요한 추가 조건을 설명하세요.",
+    "legacy": "",
+    "notebook": "week01_bigdata_overview_lab.ipynb",
+    "source_pdf": "week01_bigdata_overview.pdf"
+  },
+  {
+    "week": 2,
+    "slug": "distributed_architecture",
+    "title": "파티셔닝과 저장 포맷",
+    "pages": "5–18",
+    "goal": "키 편향과 파일 포맷을 측정하여 레이크하우스 설계 근거를 만든다.",
+    "assignment": "동일 키의 Hash 분할로 편향이 해결되지 않는 이유를 설명하세요. 네트워크 분할 상황의 CP/AP 선택과 HDFS 복제 수, 날짜 파티셔닝 전략을 포함한 설계서를 제출하세요. 로컬 Parquet는 ACID 레이크하우스 구현이 아닙니다.",
+    "legacy": "",
+    "notebook": "week02_distributed_architecture_lab.ipynb",
+    "source_pdf": "week02_distributed_architecture.pdf"
+  },
+  {
+    "week": 3,
+    "slug": "apache_spark_basics",
+    "title": "Spark RDD·DataFrame·I/O",
+    "pages": "6–15",
+    "goal": "지연 실행과 DAG를 확인하고 명시적 스키마로 원천 데이터를 구조화한다.",
+    "assignment": "select/filter/join/groupBy를 각각 추가하고 narrow/wide 변환을 구분하세요. scripts/00_fetch_to_landing.py와 10_bronze_batch.py를 실행해 원본·스키마·저장 포맷의 차이를 설명하세요.",
+    "legacy": "",
+    "notebook": "week03_apache_spark_basics_lab.ipynb",
+    "source_pdf": "week03_apache_spark_basics.pdf"
+  },
+  {
+    "week": 4,
+    "slug": "statistics_fundamentals",
+    "title": "분포·가설검정·신뢰구간",
+    "pages": "4–13",
+    "goal": "PDF/CDF를 구분하고 효과 크기·불확실성·상관관계를 함께 해석한다.",
+    "assignment": "기본 실행은 합성 데이터입니다. PDF 과제 제출 시 출처가 있는 실제 관측치 1,000개 이상으로 교체하여 histogram/PDF·ECDF·QQ plot과 통계 리포트를 작성하세요. p-value를 귀무가설이 참일 확률로 해석하지 마세요.",
+    "legacy": "",
+    "notebook": "week04_statistics_fundamentals_lab.ipynb",
+    "source_pdf": "week04_statistics_fundamentals.pdf"
+  },
+  {
+    "week": 5,
+    "slug": "feature_engineering",
+    "title": "누수 없는 특성 공학",
+    "pages": "5–18",
+    "goal": "학습 세트 안에서 전처리·변수 선택을 학습하고 검증 성능을 비교한다.",
+    "assignment": "결측값을 주입하고 imputer 전략 및 L1 강도를 바꿔 검증 AUC·선택 변수 수를 비교하세요. 기존 회귀 실습과 분류 실습의 중요도·평가 지표를 구분하세요.",
+    "legacy": "Feature_Engineering_(AI).ipynb",
+    "notebook": "week05_feature_engineering_lab.ipynb",
+    "source_pdf": "week05_feature_engineering.pdf"
+  },
+  {
+    "week": 6,
+    "slug": "streaming_algorithms",
+    "title": "Reservoir·Bloom·CMS·HLL",
+    "pages": "8–40",
+    "goal": "정확 계산을 기준으로 확률적 자료구조의 오차와 저장 공간을 비교한다.",
+    "assignment": "두 알고리즘 이상에서 파라미터·seed·입력 크기를 바꾸어 오차와 처리 시간을 비교하세요. payload bytes와 Python 객체 전체 메모리는 다릅니다. 파티션별 동일 크기 reservoir를 합치면 전체 균등 표본이 되는지 반례를 만드세요.",
+    "legacy": "",
+    "notebook": "week06_streaming_algorithms_lab.ipynb",
+    "source_pdf": "week06_streaming_algorithms.pdf"
+  },
+  {
+    "week": 7,
+    "slug": "structured_streaming",
+    "title": "파일 스트림·워터마크·복구",
+    "pages": "7–30",
+    "goal": "기존 Kafka 메시지 스키마로 유한한 파일 스트림을 실행하고 체크포인트 재시작을 검증한다.",
+    "assignment": "5분 tumbling을 10분/5분 sliding으로 바꾸고 별도 체크포인트에서 실행하세요. 지연 이벤트를 후속 배치로 넣어 recentProgress의 numRowsDroppedByWatermark를 관찰하세요. 워터마크 밖 데이터는 처리될 수도 있으며 완전성 보장을 벗어납니다.",
+    "legacy": "W07_Spark_Structured_Streaming.ipynb",
+    "notebook": "week07_structured_streaming_lab.ipynb",
+    "source_pdf": "week07_structured_streaming.pdf"
+  },
+  {
+    "week": 8,
+    "slug": "spark_ml_pipeline",
+    "title": "Spark ML 학습·튜닝·저장",
+    "pages": "6–25",
+    "goal": "전처리를 포함한 Pipeline을 검증 세트에서 선택하고 저장·재로딩한다.",
+    "assignment": "ParamGridBuilder와 CrossValidator로 학습 세트 내부 CV를 추가하세요. 저장된 PipelineModel.transform을 7주차 readStream의 광고 스키마에 적용하는 흐름을 설계하세요. 스트림 예측과 온라인 학습을 구분하세요.",
+    "legacy": "",
+    "notebook": "week08_spark_ml_pipeline_lab.ipynb",
+    "source_pdf": "week08_spark_ml_pipeline.pdf"
+  },
+  {
+    "week": 9,
+    "slug": "multi_objective_optimization",
+    "title": "CTR 모델과 Pareto 의사결정",
+    "pages": "6–23",
+    "goal": "성능·처리 시간·정책 비용의 목적 방향을 통일하고 Pareto 후보를 찾는다.",
+    "assignment": "기존 노트북의 NSGA-II 단계로 이어가세요. 비지배 정렬·crowding·부모/자식 통합 선택을 설명하고 세 seed로 비교하세요. total_bid는 단순 정책 비용 proxy이며 실제 집행 비용이 아닙니다. popularity 표준편차를 공정성 전체로 해석하지 마세요.",
+    "legacy": "week09_ctr_multi_objective_optimization_notebook.ipynb",
+    "notebook": "week09_multi_objective_optimization_lab.ipynb",
+    "source_pdf": "week09_multi_objective_optimization.pdf"
+  },
+  {
+    "week": 11,
+    "slug": "data_pipeline_practice",
+    "title": "레이크하우스 통합과 품질 검증",
+    "pages": "4–14, 18–30",
+    "goal": "Landing→Gold 실행, 품질 격리, 재실행 멱등성과 기록을 검증한다.",
+    "assignment": "scripts의 네 단계 파일을 순서대로 실행하고 실행 로그·품질 리포트·계층별 입출력을 제출하세요. 7주차 스트리밍과 batch 정제 조건을 동일하게 맞추고 같은 입력의 결과를 비교하세요. CDC/Delta MERGE는 이 로컬 스냅샷 구현의 확장 과제입니다.",
+    "legacy": "",
+    "notebook": "week11_data_pipeline_practice_lab.ipynb",
+    "source_pdf": "week11_data_pipeline_practice.pdf"
+  },
+  {
+    "week": 12,
+    "slug": "spark_optimization",
+    "title": "Spark 파티션·캐시·조인 실험",
+    "pages": "4–34",
+    "goal": "동일한 결과를 유지하며 실행 계획과 반복 측정으로 튜닝 효과를 비교한다.",
+    "assignment": "Spark UI에서 Shuffle Read/Write·spill·task 편향을 기록하세요. AQE on/off, 일반 join/broadcast를 동일 입력으로 비교하고 warm-up을 제외한 중앙값을 보고하세요. 작은 로컬 데이터의 속도 향상을 보장하지 않습니다.",
+    "legacy": "",
+    "notebook": "week12_spark_optimization_lab.ipynb",
+    "source_pdf": "week12_spark_optimization.pdf"
+  },
+  {
+    "week": 13,
+    "slug": "mlops_pipeline",
+    "title": "실험 기록·모델 버전·배포 판단",
+    "pages": "4–16, 19–27",
+    "goal": "모델과 데이터 버전을 기록하고 모의 배포 게이트·드리프트 경보를 설계한다.",
+    "assignment": "수집→검증→학습→등록→승인→배포→모니터링 DAG를 작성하세요. MLflow로 run.json의 파라미터·지표·모델을 옮기고 Canary 비율, p95 지연·오류율·성능 경보 및 롤백 기준을 설계하세요. 기본 실습은 로컬 모의 실행이며 실제 서비스 배포가 아닙니다.",
+    "legacy": "",
+    "notebook": "week13_mlops_pipeline_lab.ipynb",
+    "source_pdf": "week13_mlops_pipeline.pdf"
+  }
+]
